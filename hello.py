@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 myapp = Flask(__name__)
 
 @myapp.route("/")
 def hello():
-    return "Hello Flask, on Azure App Service for Linux"
+    return render_template('index.html')
+ 
